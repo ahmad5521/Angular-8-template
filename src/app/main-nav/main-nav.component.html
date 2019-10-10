@@ -1,0 +1,82 @@
+<div [ngClass]="{'nav-open': isActive }">
+
+    <button class="con navbar-toggle d-block d-lg-none " type="button" aria-label="Toggle navigation" (click)="isActive = !isActive;">
+        <div class="bar top"></div>
+        <div class="bar middle"></div>
+        <div class="bar bottom"></div>                
+    </button>
+    <ul class="list-group bg-white m-0 p-0 border-0 py-4"> 
+    <li class="list-group-item "> 
+        <a href="/">
+            <i class="fal fa-fw  fa-1x mr-2 fa-home"></i>
+            <span>Home</span>
+        </a> 
+    </li>
+    <li class="list-group-item "> 
+        <a routerLink="/login">
+            <i class="fal fa-fw  fa-1x mr-2 fa-home"></i>
+            <span>Log in</span>
+        </a> 
+    </li>
+    <li class="list-group-item"> 
+            <a  routerLink="/" >
+                <i class="fal fa-fw  fa-1x mr-2 fa-cube"></i>
+                <span>Products</span>
+            </a> 
+    </li>
+    <li class="list-group-item "> 
+            <a  routerLink="/productDetails" >
+                <i class="fal fa-fw  fa-1x mr-2 fa-cube"></i>
+                <span>product Details</span>
+            </a> 
+    </li>
+    <li class="list-group-item "> 
+        <a  routerLink="/specifics" >
+            <i class="fal fa-fw  fa-1x mr-2 fa-cube"></i>
+            <span>Specifics</span>
+        </a> 
+    </li>
+
+    <li class="list-group-item "> 
+        <a  routerLink="/PackageDetails" >
+            <i class="fal fa-fw  fa-1x mr-2 fa-cube"></i>
+            <span>Package Details</span>
+        </a> 
+    </li>
+
+    <li class="list-group-item "> 
+        <a  routerLink="/ServiceDetails" >
+            <i class="fal fa-fw  fa-1x mr-2 fa-cube"></i>
+            <span>Service Details</span>
+        </a> 
+    </li>
+
+    <li class="list-group-item "> 
+        <a  routerLink="/customerList" >
+            <i class="fal fa-fw  fa-1x mr-2 fa-cube"></i>
+            <span>customer List</span>
+        </a> 
+    </li>
+
+    <li class="list-group-item "> 
+        <a  routerLink="/customerProfile" >
+            <i class="fal fa-fw  fa-1x mr-2 fa-cube"></i>
+            <span>customer Profile</span>
+        </a> 
+    </li>
+    <li class="list-group-item "> 
+        <a  routerLink="/Dashboard" >
+            <i class="fal fa-fw  fa-1x mr-2 fa-chart-bar "></i>
+            <span>Dashboard  </span>
+        </a> 
+    </li>
+    <li class="list-group-item "> 
+        <a  routerLink="/PlatformService" >
+            <i class="fal fa-fw  fa-1x mr-2 fa-chart-bar "></i>
+            <span>Platform Service  </span>
+        </a> 
+    </li>
+
+    </ul>
+
+</div>

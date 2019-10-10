@@ -1,0 +1,48 @@
+<header class="bg-white header" > 
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-5 col-md-5 col-xl-2 p-0 logo "> 
+                <a href="index.html">  
+                    <img src="assets/ui/images/Elm-logo.svg" alt="ELM-X Platform">
+                    <span class="logo-ttl text-dark p-2 p-md-3  h3">Elm X</span>
+                </a>  
+            </div>
+            <div class="col-7 col-md-7 col-xl-10  right-side p-0 px-md-3">
+                <div class="d-flex flex-column flex-md-row-reverse justify-content-between text-right">
+                    <div class="user-actions  py-3 py-md-4">
+                        <a href="javascript:;" class="p-2 d-inline-block u-action-list text-third ml-2 ">
+                            <i class="fal fa-fw h4 m-0 fa-envelope"></i> 
+                            <span class="badge counter-badge">1</span>
+                        </a> 
+                        <a href="javascript:;" class="p-2 d-inline-block u-action-list text-third ml-2">
+                            <i class="fal fa-fw h4 m-0 fa-bell"></i>
+                            <span class="badge counter-badge">15</span>
+                        </a> 
+                        <span class="dropdown user-dropdown"> 
+                            <a href="javascript:;" class="dropdown-toggle p-2 d-inline-block u-action-list text-third ml-2 ml-lg-0" (click)="isActive = !isActive;">
+                                <i class="fal fa-fw h4 m-0 mr-2 fa-user"></i>
+                                <span class="d-xl-inline-block d-none mr-2">Abdullah AlQahtany</span>
+                                <i class="fas fa-fw fa-1x fa-chevron-down"></i>
+                            </a> 
+                            <div class="collapse dropdown-menu" [ngClass]="{'show': isActive }" data-toggle="dropdown"  (mouseleave)="isActive = false">
+                                <a class="dropdown-item" href="#">Profile</a>
+                                <a class="dropdown-item" href="#">Settings</a>
+                                <a class="dropdown-item text-danger" href="#">Log out</a>
+                            </div> 
+                        </span>
+                    </div>
+                 
+                    <nav aria-label="breadcrumb" class="d-xl-block d-none">
+                        <ol class="bg-transparent breadcrumb m-0 mt-1 px-0 py-4">
+                            <li class="breadcrumb-item"><a href="#">Products</a></li>
+                            <li class="breadcrumb-item"><a href="#">Muqeem</a></li>
+                            <li class="breadcrumb-item"><a href="#">UCP</a></li>
+                            <li class="breadcrumb-item"><a href="#">Configuration</a></li> 
+                            <li class="breadcrumb-item active" aria-current="page">Customer</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div> 
+    </section>
+</header>   

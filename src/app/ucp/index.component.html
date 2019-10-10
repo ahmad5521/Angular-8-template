@@ -1,0 +1,124 @@
+<div class="d-flex justify-content-between align-items-center py-3 flex-md-row">
+    <h1 class="h3 page-title py-1  py-md-3 tabs-head m-0">
+        <a routerLink="/Dashboard" class="d-inline-block mr-5  active-tab">
+            <i class="fal fa-fw fa-1x mr-2 fa-chart-bar "></i>
+            <span>Dashboard</span>
+        </a>
+        <a routerLink="/customerList" class="d-inline-block mr-5">
+            <i class="fal fa-fw fa-1x mr-2 fa-poll-people "></i>
+            <span>Customers List</span>
+        </a>
+    </h1>
+</div>
+<div class="row form-group m-0 ">
+    <div class="col-md-3 col-lg-2 col-xl-1">
+        <label class="col-form-label"> Product(s) </label>
+    </div>
+    <div class="col-md-4 col-xl-3">
+        <p-multiSelect [options]="productCodes" [showToggleAll]="false" maxSelectedLabels="10"
+            [panelStyle]="{minWidth:'15em'}" styleClass="form-control ui-multiselect" [(ngModel)]="selectProductCodes"
+            optionLabel="productCode" class="multiselect-control round">
+        </p-multiSelect>
+    </div>
+</div>
+
+
+<section class="dashboard-charts mt-5">
+    <div class="row text-center">
+        <div class="col-md-6 mb-4">
+            <h3 class="bg-white text-elm-1 p-4 text-center m-0">
+                Customer category
+            </h3>
+            <div class="p-4 bg-white justify-content-center d-flex">
+                <p-chart type="doughnut" [data]="CustomerCategoryData" [options]="optionsDougnuts"
+                    [plugins]="pluginDataLabels" width="350px" height="250px"></p-chart>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <h3 class="bg-white text-elm-2 p-4 text-center m-0">
+                Profile Status
+            </h3>
+            <div class="p-4 bg-white justify-content-center d-flex">
+                <p-chart type="doughnut" [data]="ProfileStatusData" [options]="optionsDougnuts"
+                    [plugins]="pluginDataLabels" width="350px" height="250px"></p-chart>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <h3 class="bg-white text-elm-3 p-4 text-center m-0">
+                Customer Onboarding <button type="button" class="btn btn-outline-primary" data-toggle="modal"
+                    data-target="#myModal">
+                    <i class="fal fa-cog mr-2 fa-fw"></i>
+                </button>
+            </h3>
+            <div class="p-4 bg-white justify-content-center d-flex">
+                <span class="text-primary border border-primary rounded-circle p-5">400</span>
+            </div>
+            
+        </div>
+        <div class="col-md-6 mb-4">
+            <h3 class="bg-white text-elm-4 p-4 text-center m-0">
+                Customer Distribution
+            </h3>
+            <div class="p-4 bg-white justify-content-center d-flex">
+                <p-chart type="bar" [data]="ServiceUsageData" [options]="optionsServiceUsage" width="450px"
+                    height="250px"></p-chart>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="modal" id="myModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Add New Attribute</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form #form="ngForm">
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label for="fromDate">FromDate</label>
+                            <p-calendar styleClass="form-control" [showWeek]="true" placeholder="FromDate"
+                                [readonlyInput]="true" dateFormat="yy-mm-dd" name="fromDate" #key="ngModel"
+                                [(ngModel)]="fromDate" (onBlur)="fromDateOnBlur(event)"
+                                (onClose)="fromDateOnClose(event)" required="true">
+                            </p-calendar>
+                            <span class="smaller text-danger">
+                                required
+                            </span>
+                        </div>
+                        <div class="form-group  col-md-12">
+                            <label for="toDate">ToDate</label>
+                            <p-calendar styleClass="form-control" [showWeek]="true" placeholder="ToDate"
+                                [readonlyInput]="true" dateFormat="yy-mm-dd" name="toDate" #key="ngModel"
+                                [(ngModel)]="toDate" (onBlur)="toDateOnBlur(event)" (onClose)="toDateOnClose(event)"
+                                required="true">
+                            </p-calendar>
+                            <span class="smaller text-danger">
+                                required
+                            </span>
+                            <div class="form-group  col-md-12">
+                                <label for="rate">Rate</label>
+                                <p-dropdown styleClass="form-control" name="rates" #key="ngModel" [options]="rates"
+                                    [(ngModel)]="selectedRate" optionLabel="name" placeholder="Select a Rate"
+                                    required="true">
+                                </p-dropdown>
+                                <span class="smaller text-danger">
+                                    required
+                                </span>
+                            </div>
+                        </div>
+                        <div class="text-right mt-4">
+                            <button (click)="cancel(form)" class="btn btn-outline-secondary">cancel</button>
+                            <button class="btn btn-outline-primary" (click)="submit(form)">Refresh</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

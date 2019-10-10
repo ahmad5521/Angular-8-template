@@ -1,0 +1,114 @@
+{
+  "Text": {
+    "Home": "الرئيسية",
+    "UserName": "اسم المستخدم",
+    "Password": "كلمة المرور",
+    "ProductPageTitel": "المنتجات",
+    "ProductForm": "تفاصيل المنتج",
+    "AddProduct" : "Add Product Form",
+    "productCode": "رقم المنتج",
+    "productNameAR": "اسم المنتج - عربي",
+    "productNameEN": "اسم المنتج - انجليزي",
+    "description": "الوصف",
+    "status": "نشط",  
+    "active" : "نعم",
+    "notActive" : "لا",
+
+    "specificPageTitle": "Manage Dynamic Attribures",
+    "AttributeName": "اسم المحدد",
+    "Type": "النوع",
+    "Format": "الصيغه",
+    "Description": "وصف",
+    "Active": "الحالة",
+    "specificFormTitle":"اضافه محدد جديد",
+
+    "String":"نص",
+    "Number":"رقم",
+    "Boolean":"نعم/لا",
+    "Date":"yyyymmdd",
+    "SpecificAlert": "تحديث او اضافه هذا المحدد سوف تكون ممنوعه",
+    "Delete":"سيتم حذف المحدد هل انت متأكد؟",
+    "ChangeStatus":"Are You Sure ?"
+
+  },
+  "BreadCrumb": {
+    "Administration": "مدير النظام",
+    "Products": "المنتجات",
+    "ProductDetails": "تفاصيل المنتج",
+    "AddProduct": "اضافة منتتج",
+    "Specifics": "محدد"
+  },
+  "Nav": {
+    "Products": "Products"
+
+  },
+  "Confirm": {
+    "Update":"تعطيل المحدد",
+    "DeleteItemHeader":"حذف",
+    "ChangeStatusHeader": "Change Status"
+  },
+  "Validation": {
+    "Required": "This field is required",
+    "ArabicPatternMsg" : "Must be arabic text",
+    "EnglishPatternMsg": "Must be english text",
+    "ThreeDigitsPatternMsg": "Must be Three Digits"
+  },
+
+  "WepApiErrorCodes": {
+    "5000": "Missing Field",
+    "5001": "MessageId is missing in request Header",
+    "5002": "ProductCode is missing in request Header",
+    "5003": "ProductCode is invalid format",
+    "5004": "SenderId is invalid format",
+    "5005": "SenderId is missing in request Header",
+    "5006": "TimeStamp is missing in request Header",
+    "5007": "TimeStamp is invalid format in request Header",
+    "5008": "Invalid ClientKey",
+    "5009": "MessageId is invalid format",
+    "5010": "max length is exceed limit",
+    "5011": "Invalid Input Format",
+    "5012": "ProductCode must be 3 digits",
+    "5013": "Invalid Value",
+    "5014": "Not allowed to delete this item",
+    "5015": "Child object must be new if the parent object is new",
+    "5016": "ProductCode Not Exists",
+    "6015": "Invalid UserName or Password",
+    "6017": "Invalid Product Code Length",
+
+    "2005": "Invalid product code value",
+    "2032": "Specific attribute name already exist",
+    "2033": "Specific attribute name does not exist",
+    "2035": "Specific attribute name Attribute is used by customer and can not be deleted",
+
+    "2034": "product code already exist",
+    "2037": "product name english should be unique",
+    "2038": "product name arabic should be unique",
+    "2036": "Invalid productRefNumber value "
+
+  },
+
+  "Button": {
+    "LogIn": "تسجيل دخول",
+    "edit": "تعديل",
+    "save": "حفظ",
+    "cancel": "الغاء",
+    "delete": "حذف",
+    "newItem": "اضافه",
+    "back": "عودة",
+    "LogOut": "خروج",
+    "SpecificAtt": "Customer Dyanamic Attributes"
+  },
+  "Message": {
+    "PendingUser": "Your registration request is waiting for admin approval",
+    "LockedUser": "Your Account has been locked",
+    "IncorrectUserNameOrPassword": "اسم المستخدم او كلمة المرور غير صحيحية",    
+    "ServeSucceed": "The Item Has Bean Served Successfuly.",
+    "ServeError": "CHange Status Error.",
+    "DeleteSucceed": "تم حذف بنجاح",
+    "UpdateSucceed": "تم التعديل بنجاح",
+    "Empty": "لا يوجد بيانات",
+    "DeleteError" :"اسم المحدد غير موجود",
+    "DeleteNotWorking" :"خطأ فى حذف هذا المحدد"
+    
+  }
+}

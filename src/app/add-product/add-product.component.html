@@ -1,0 +1,81 @@
+
+<div class="bg-white p-4 shadows">
+
+  <form> 
+    <div class="row">
+      <div class="col-md-6">
+          <div class="form-group"> 
+              <label class="col-form-label" for="productImage">product Logo</label>  
+              <div class="file-upload d-flex justify-content-center align-items-center">
+              <p-fileUpload 
+                #fileUploader 
+                previewWidth="100" 
+                previewHeight="100"
+                class="co-fileUpload" 
+                [auto]="true" >
+                <ng-template  pTemplate="content">
+                  <img width="100" height="100" src="\assets\ui\images\Ethra.png"> 
+                </ng-template>
+              </p-fileUpload>   
+              </div>
+              <!-- <span class="smaller text-danger">error</span>  -->
+          </div>
+      </div>
+      <div class="col-md-6">
+          <div class="form-group">
+            <label for="productCode" class="col-form-label">product code</label>
+            <div>
+              <input type="text" name="productCode" class="form-control" />
+              <!-- <span class="smaller text-danger">error</span> -->
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="productNameEN" class="col-form-label">english name</label>
+            <div>
+              <input type="text" name="productNameEN" class="form-control" />
+              <!-- <span class="smaller text-danger">error</span> -->
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="productNameAR" class="col-form-label">arabic name</label>
+            <div>
+              <input type="text" name="productNameAR" class="form-control" />
+              <!-- <span class="smaller text-danger">error</span> -->
+            </div>
+          </div>
+      </div>
+    </div>
+      <div class="row"> 
+        <div class="form-group col-md-12">
+          <label for="description" class="col-form-label">description</label>
+          <div>
+            <textarea rows="3" name="description" class="form-control" maxlength="255"> </textarea>
+            <!-- <span class="smaller text-danger">error</span> -->
+          </div> 
+        </div>
+        <div class="form-group col-md-12">
+          <label for="productStatus" class="col-form-label">Status</label>
+          <div class="pt-2">  
+              <div class="custom-control custom-radio  d-inline-block ">
+                  <input id="Active" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="">
+                  <label class="custom-control-label" for="Active">Active </label>
+              </div>
+              <div class="custom-control custom-radio  d-inline-block  mx-3">
+                  <input id="Deactivate" name="paymentMethod" type="radio" class="custom-control-input" required="">
+                  <label class="custom-control-label" for="Deactivate"> Deactivate</label>
+              </div> 
+          </div>
+        </div>
+
+      </div>
+
+      <p-footer>
+        <div class="text-right mt-4">
+            <button class="btn btn-outline-secondary"  data-dismiss="modal">cancel</button>
+            <button class="btn btn-outline-primary">add</button>
+        </div>
+      </p-footer>
+
+  </form>
+
+</div>

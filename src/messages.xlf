@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="9712a017ccd57a603b13f004f5599ee06f9e52ae" datatype="html">
+        <source> عنوان </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/index/index.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">this is the pagetitle</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

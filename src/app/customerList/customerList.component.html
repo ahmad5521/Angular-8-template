@@ -1,0 +1,152 @@
+<div class="d-flex justify-content-between align-items-center py-3 flex-md-row">
+    <h1 class="h3 page-title py-1  py-md-3 tabs-head m-0"> 
+      <a routerLink="/Dashboard" class="d-inline-block mr-5 ">
+          <i class="fal fa-fw fa-1x mr-2 fa-chart-bar "></i>
+          <span>Dashboard</span>    
+      </a>
+      <a routerLink="/customerList" class="d-inline-block mr-5 active-tab">
+          <i class="fal fa-fw fa-1x mr-2 fa-poll-people "></i>
+          <span>Customers List</span>    
+      </a>
+  </h1>   
+</div> 
+
+<div class="row form-group m-0 "> 
+  <div class="col-md-3 col-lg-2 col-xl-1">
+      <label class="col-form-label"> Product(s)  </label>
+  </div>
+  <div class="col-md-4 col-xl-3"> 
+      <p-multiSelect 
+      [options]="productCodes" 
+      [showToggleAll]="false" 
+      maxSelectedLabels="10"
+      [panelStyle]="{minWidth:'15em'}" 
+      styleClass="form-control ui-multiselect"  
+      [(ngModel)]="selectProductCodes"
+      optionLabel="productCode"
+      class="multiselect-control round">
+    </p-multiSelect>
+  </div> 
+</div>
+
+
+<section>
+
+
+        
+    <div class="d-flex justify-content-between align-items-center py-3 flex-md-row">
+      <h1 class="h3 page-title py-1  py-md-3 tabs-head m-0"> 
+        <a routerLink="/Organizations"  class="d-inline-block mr-5 active-tab">
+            <i class="fal fa-fw fa-1x mr-2 fa-building "></i>
+            <span>Organizations</span>    
+        </a>
+        <a routerLink="/Individuals" class="d-inline-block mr-5">
+            <i class="fal fa-fw fa-1x mr-2 fa-user "></i>
+            <span>Individuals</span>    
+        </a>
+      </h1>  
+      <div class="search-item my-4 my-md-2">
+        <form action="">
+          <input type="text"  class="float-right form-control search-control">
+          <button type="submit" pInputText class="search-button"><i class="fal fa-fw fa-search"></i></button>
+        </form>
+      </div>
+    </div> 
+    <div class="ui-table-wrapper ng-star-inserted">
+        <table class="table bg-white bg-white table-special">
+            <tr> 
+              <th>customerReferenceNumber</th>
+              <th>englishName</th>
+              <th>arabicName</th>
+              <th>idNumber</th>
+              <th>idType</th>
+              <th>issueDateGregorian</th>
+              <th>issueDateHijri</th>
+              <th>nationality</th>
+              <th>registrationDate</th>
+                <th>   </th>
+            </tr>
+            <tr> 
+              <td data-cell="customerReferenceNumber">111112222222222222222222222222222222221111</td>
+              <td data-cell="englishName">111111111</td>
+              <td data-cell="arabicName">111111111</td>
+              <td data-cell="idType">111111111</td>
+              <td data-cell="idNumber">111111111</td>
+              <td data-cell="issueDateGregorian">111111111</td>
+              <td data-cell="issueDateHijri">111111111</td>
+              <td data-cell="nationality">111111111</td>
+              <td data-cell="registrationDate">111111111</td> 
+              <td data-cell="Actions">
+                <span class="menu-btn mx-2">
+                    <a  class="table-action text-primary" icon="fal fa-bars" label="Show" (click)="menu.toggle($event)">
+                      <i class="fal fa-fw fa-bars"></i>  
+                    </a>
+                    <p-tieredMenu #menu [model]="items" [popup]="true"></p-tieredMenu> 
+                </span> 
+              </td>
+            </tr>  
+            <tr> 
+              <td data-cell="customerReferenceNumber">111111111</td>
+              <td data-cell="englishName">111111111</td>
+              <td data-cell="arabicName">111111111</td>
+              <td data-cell="idType">111111111</td>
+              <td data-cell="idNumber">111111111</td>
+              <td data-cell="issueDateGregorian">111111111</td>
+              <td data-cell="issueDateHijri">111111111</td>
+              <td data-cell="nationality">111111111</td>
+              <td data-cell="registrationDate">111111111</td> 
+              <td data-cell="Actions"> 
+                <span class="menu-btn mx-2">
+                    <a  class="table-action text-primary" icon="fal fa-bars" label="Show" (click)="menu4.toggle($event)">
+                      <i class="fal fa-fw fa-bars"></i>  
+                    </a>
+                    <p-tieredMenu #menu4 [model]="items" [popup]="true"></p-tieredMenu> 
+                </span> 
+              </td>
+            </tr>  
+            <tr> 
+              <td data-cell="customerReferenceNumber">111111111</td>
+              <td data-cell="englishName">111111111</td>
+              <td data-cell="arabicName">111111111</td>
+              <td data-cell="idType">111111111</td>
+              <td data-cell="idNumber">111111111</td>
+              <td data-cell="issueDateGregorian">111111111</td>
+              <td data-cell="issueDateHijri">111111111</td>
+              <td data-cell="nationality">111111111</td>
+              <td data-cell="registrationDate">111111111</td> 
+              <td data-cell="Actions"> 
+                <span class="menu-btn mx-2">
+                    <a  class="table-action text-primary" icon="fal fa-bars" label="Show" (click)="menu5.toggle($event)">
+                      <i class="fal fa-fw fa-bars"></i>  
+                    </a>
+                    <p-tieredMenu #menu5 [model]="items" [popup]="true"></p-tieredMenu> 
+                </span> 
+              </td>
+            </tr>  
+            <tr> 
+              <td data-cell="customerReferenceNumber">111111111</td>
+              <td data-cell="englishName">111111111</td>
+              <td data-cell="arabicName">111111111</td>
+              <td data-cell="idType">111111111</td>
+              <td data-cell="idNumber">111111111</td>
+              <td data-cell="issueDateGregorian">111111111</td>
+              <td data-cell="issueDateHijri">111111111</td>
+              <td data-cell="nationality">111111111</td>
+              <td data-cell="registrationDate">111111111</td> 
+              <td data-cell="Actions"> 
+                <span class="menu-btn mx-2">
+                    <a  class="table-action text-primary" icon="fal fa-bars" label="Show" (click)="menu6.toggle($event)">
+                      <i class="fal fa-fw fa-bars"></i>  
+                    </a>
+                    <p-tieredMenu #menu6 [model]="items" [popup]="true"></p-tieredMenu> 
+                </span> 
+              </td>
+            </tr>  
+        </table>
+    </div>
+
+          
+</section>  
+
+
+ 
